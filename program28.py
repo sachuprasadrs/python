@@ -1,4 +1,9 @@
 n = int(input("Enter the number of names: "))
-names = [input("Enter name: ") for _ in range(n)]
-count_a = sum(name.lower().count('a') for name in names)
+names = []
+for _ in range(n):
+    name = input("Enter name: ")
+    names.append(name)
+count_a = 0
+for name in names:
+    count_a += name.lower().count('a')
 print("Total occurrences of 'a':", count_a)
