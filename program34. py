@@ -1,0 +1,10 @@
+list1 = list(map(int, input("Enter the first list of integers separated by spaces: ").split()))
+list2 = list(map(int, input("Enter the second list of integers separated by spaces: ").split()))
+
+same_length = len(list1) == len(list2)
+same_sum = sum(list1) == sum(list2)
+common_values = set(list1).intersection(list2)
+
+print("Are the lists of the same length?", same_length)
+print("Do the lists have the same sum?", same_sum)
+print("Common values in both lists:", list(common_values))
